@@ -18,7 +18,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-#desktop img {
+#desktop img, button {
   display: none;
 }
 
@@ -34,7 +34,7 @@ body {
     display: none;
   }
 
-  #desktop img {
+  #desktop img, button {
     display: block;
   }
 
