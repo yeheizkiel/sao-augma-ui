@@ -1,0 +1,272 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #EEE;
+  font-family: 'Roboto', sans-serif;
+}
+
+#mobile {
+  color: #777;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#desktop img {
+  display: none;
+}
+
+@media screen and (min-width: 1366px) {
+  body {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: FZZhunYuan-M02;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #desktop img {
+    display: block;
+  }
+
+  #blinder {
+    width: 100%;
+    height: 100%;
+    padding-top: 20%; 
+    box-sizing: border-box;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    z-index: 9999;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    animation: fadeOut 1s 3s linear normal forwards;
+  }
+
+  @keyframes fadeOut {
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  #iconMic {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-image: url('../img/iconMic.png');
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    outline: none;
+  }
+
+  #iconMenu {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-image: url('../img/iconMenu.png');
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    outline: none;
+  }
+
+  #date {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 46px;
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  #spinners {
+    width: 100%;
+    height: 100%;
+    margin-top: -24px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #spinners div {
+  }
+
+  #spinner1 {
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin: auto;
+    box-sizing: border-box;
+    animation: spin 2.4s ease reverse infinite;
+  }
+
+  #spinner2 {
+    width: 28px;
+    height: 28px;
+    border: 6px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 6px;
+    animation: spin 1.5s linear normal infinite;
+  }
+
+  #spinner3 {
+    width: 28px;
+    height: 28px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-right-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 6px;
+    animation: spin 2.2s .4s linear normal infinite;
+  }
+
+  #spinner4 {
+    width: 22px;
+    height: 22px;
+    border: 1px solid transparent;
+    border-top-color: white;
+    border-right-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 6px;
+    animation: spin 2.2s .4s linear reverse infinite;
+  }
+
+  #spinner5 {
+    width: 14px;
+    height: 14px;
+    border: 3px solid transparent;
+    border-top-color: white;
+    border-left-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 6px;
+    transform: rotate(45deg);
+    animation: spin2 2s .6s ease normal infinite;
+  }
+
+  #spinner6 {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -23px
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin2 {
+    100% {
+      transform: rotate(405deg);
+    }
+  }
+
+  header img {
+    display: block;
+    margin: 40px auto 0px auto;
+  }
+
+  footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer div#botbutton {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer div#botbutton button.botbutton {
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: center center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    margin: 0px 10px;
+    outline: none;
+    transition: 0.3s ease-out;
+  }
+
+  footer div#botbutton button.botbutton:active {
+    transform: scale(0.9);
+  }
+
+  footer div#botbutton .botbutton:first-child {
+    background-image: url('../img/icon1.png');
+    margin: 10px;
+  }
+
+  footer div#botbutton .botbutton:nth-child(2) {
+    background-image: url('../img/icon2.png');
+  }
+
+  footer div#botbutton .botbutton:nth-child(3) {
+    background-image: url('../img/icon3.png');
+  }
+
+  footer div#botbutton .botbutton:last-child {
+    background-image: url('../img/icon4.png');
+    margin: 10px;
+  }
+
+  /*#a {
+  width: 100px;
+  height: 100px;
+  border: 5px solid red;
+  position: absolute;
+  }
+
+  #b {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  position: relative;
+  margin: 0 auto;
+  }*/
+}
