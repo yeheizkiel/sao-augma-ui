@@ -1,4 +1,3 @@
-alert('Berhasil push lewat akun raven-id!');
 function pageLoad() {
 let set;
 let t;
